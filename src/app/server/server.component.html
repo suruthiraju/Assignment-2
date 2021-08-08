@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class ="col">
+            <h3>UserName via Two way binding</h3>
+        </div>
+        <hr>
+        <div class="col">
+            <input type="text" class="form-control" [(ngModel)] = "textDisplayed" (input) = "onGetInputText($event)"> 
+            <p>The text that your have entered is "{{textDisplayed}}"</p>
+            <br>
+            <button class="btn btn-primary" [disabled] = "!togglebtn" (click) = "onChangeText()">Empty the string</button>
+        </div>
+
+    </div>
+</div>
+<app-header></app-header>
